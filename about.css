@@ -1,0 +1,188 @@
+:root{
+    --classicWhite: white;
+    --secondaryColor: #6100FF;
+    --black: black;
+    --fontWhite: rgb(185, 185, 185);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--black);
+    font-family: 'Inter', sans-serif;
+
+}
+
+.aboutme{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    margin: 0px auto;
+    box-sizing: border-box;
+    max-width: 1000px;
+    color: var(--classicWhite);
+}
+.aboutme-container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.aboutme-title h2{
+    color: var(--classicWhite);
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.aboutme-title hr{
+    border-color: var(--secondaryColor);
+    background-color: var(--secondaryColor);
+    width: 237px;
+    height: 5px;
+    flex-shrink: 0;
+}
+
+.aboutme-text p{
+    color: var(--fontColor);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.aboutme-text a{
+    text-decoration: none;
+    color: var(--secondaryColor);
+}
+
+.aboutme-text a:hover{
+    text-decoration: underline;
+}
+
+.aboutme-title span{
+    font-size:25px;
+    color: var(--secondaryColor);
+}
+
+.aboutme-title button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color:  var(--fontWhite);
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+.aboutme-title button:hover{
+    color: var(--classicWhite);
+}
+
+
+.aboutme-pic img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--classicWhite);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: 1s ease;
+}
+.aboutme-pic img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+
+
+.aboutme-between{
+    display: grid;
+    grid-template-columns: 2fr 2fr; 
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.aboutme-skills ul{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    list-style: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: var(--fontColor);
+}
+
+.aboutme-skills li:before {
+    content: "▸ "; 
+    color: var(--secondaryColor);
+} 
+
+
+
+
+
+@media (max-width: 1080px){
+    .aboutme{
+  padding: 0px 100px;
+}
+
+}
+
+@media (max-width: 850px){
+    .aboutme{
+        margin: 100px 0px;
+    }
+    .aboutme-between{
+        grid-template-columns: none; 
+        margin: 0 auto;
+    }
+    .aboutme p{
+        margin-top: 25px;
+    }
+    
+    .aboutme-pic{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutme-title hr{
+        border-color: var(--secondaryColor);
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .mainsite{
+  padding: 0px 50px;
+}
+.aboutme{
+    margin: 150px 0px;
+}
+}
+
+@media (max-width: 480px){
+    .aboutme{
+    padding: 0px 25px;
+    margin: 150px 0px;
+}
+
+    .aboutme h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutme-title hr{
+        width: 100%;
+    }
+}
+
